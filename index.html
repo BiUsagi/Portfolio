@@ -12,10 +12,13 @@
     <meta name="description" content="Personal portfolio of Trương Bá Sơn - Web Developer" />
     <meta name="author" content="Trương Bá Sơn" />
     
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="web developer, portfolio, Laravel, PHP, JavaScript, Đà Nẵng" />
+    
     <title>Portfolio - Sơn</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
     
     <!-- Core CSS -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
@@ -30,6 +33,7 @@
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/dark-theme.css" />
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Main Navigation -->
@@ -200,34 +204,34 @@
           <!-- Skill Item -->
           <div class="col-md-4 col-sm-6 animate-box mb-5">
             <div class="progress-wrap ftco-animate text-center">
-              <div class="mb-3"><img src="images/skills/html5.png" alt="HTML5" class="skill-image" /></div>
+              <div class="mb-3"><img src="images/skills/html5.png" alt="HTML5" class="skill-image" loading="lazy" /></div>
               <h3>HTML5</h3>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 animate-box mb-5">
             <div class="progress-wrap ftco-animate text-center">
-              <div class="mb-3"><img src="images/skills/css3.png" alt="CSS3" class="skill-image" /></div>
+              <div class="mb-3"><img src="images/skills/css3.png" alt="CSS3" class="skill-image" loading="lazy" /></div>
               <h3>CSS3</h3>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 animate-box mb-5">
             <div class="progress-wrap ftco-animate text-center">
               <div class="mb-3">
-                <img src="images/skills/JavaScript-logo.png" alt="Javascript" class="skill-image" />
+                <img src="images/skills/JavaScript-logo.png" alt="Javascript" class="skill-image" loading="lazy" />
               </div>
               <h3>Javascript</h3>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 animate-box mb-5">
             <div class="progress-wrap ftco-animate text-center">
-              <div class="mb-3"><img src="images/skills/laravel.png" alt="Laravel" class="skill-image" /></div>
+              <div class="mb-3"><img src="images/skills/laravel.png" alt="Laravel" class="skill-image" loading="lazy" /></div>
               <h3>PHP Laravel</h3>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 animate-box mb-5">
             <div class="progress-wrap ftco-animate text-center">
               <div class="mb-3">
-                <img src="images/skills/bootstrap-stack.png" alt="Bootstrap 5" class="skill-image" />
+                <img src="images/skills/bootstrap-stack.png" alt="Bootstrap 5" class="skill-image" loading="lazy" />
               </div>
               <h3>Bootstrap 5</h3>
             </div>
@@ -355,50 +359,65 @@
     </section>
 
     <!-- PDF Preview Modal Component -->
-     <div 
+    <div 
       class="modal fade" 
       id="pdfPreviewModal" 
       tabindex="-1" 
       role="dialog" 
       aria-labelledby="pdfPreviewModalLabel" 
-      aria-hidden="true">
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content" style="background-color: #181818; color: #fff;">
-        <!-- Modal Header -->
-        <div class="modal-header" style="border-bottom: 1px solid #333; background: #181818;">
-        <h5 class="modal-title" id="pdfPreviewModalLabel" style="color: #fff;">Xem tài liệu</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 1;">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <div class="modal-content dark-theme">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="pdfPreviewModalLabel">Xem tài liệu</h5>
+            <button 
+              type="button" 
+              class="close" 
+              data-dismiss="modal" 
+              aria-label="Đóng"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          
+          <!-- Modal Body - PDF Viewer -->
+          <div class="modal-body">
+            <iframe 
+              id="pdfViewer" 
+              class="pdf-frame"
+              title="PDF Document Viewer"
+              aria-label="PDF Document Content"
+            ></iframe>
+          </div>
         </div>
-        <!-- Modal Body - PDF Viewer -->
-        <div class="modal-body" style="background: #222;">
-        <iframe id="pdfViewer" style="width: 100%; height: 80vh; background: #222;" frameborder="0"></iframe>
-        </div>
-      </div>
       </div>
     </div>
 
     <!-- Projects Section -->
-    <section class="ftco-section ftco-project" id="projects-section">
+    <section class="ftco-section ftco-project" id="projects-section" aria-label="Projects">
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
+            <h2 class="mb-4">My Projects</h2>
+            <p class="text-muted">Tổng hợp những sản phẩm web nổi bật mà mình đã thực hiện, ứng dụng đa dạng công nghệ và giải pháp sáng tạo</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <a href="pages/todolist.html">
+            <a href="pages/todolist.html" class="project-link" aria-label="View Sou-ToDo project details">
               <div
                 class="project img ftco-animate d-flex justify-content-center align-items-center"
                 style="background-image: url(images/projects/todo-list/home.png)"
+                role="img"
+                aria-label="Screenshot of Sou-ToDo project"
               >
                 <div class="overlay"></div>
                 <div class="text text-center p-4">
-                  <h3><a href="pages/todolist.html">Sou-ToDo</a></h3>
-                  <span>Website Quản lý Công việc</span>
+                  <h3><span class="project-title">Sou-ToDo</span></h3>
+                  <span class="project-description">Website Quản lý Công việc</span>
                 </div>
               </div>
             </a>
@@ -584,20 +603,13 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
 
-    <!-- PDF Preview Handler -->
-    <script>
-      function openPdfPreview(pdfPath) {
-        const pdfViewer = document.getElementById('pdfViewer');
-        if (!pdfPath) {
-          console.error('PDF path is required');
-          return;
-        }
-        pdfViewer.src = pdfPath;
-        $('#pdfPreviewModal').modal('show');
-      }
-    </script>
-
-    <!-- Custom Scripts -->
+    <!-- Application Scripts -->
+    <script src="js/interactions.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Initialize Components -->
+    <script>
+      // Script initialization will be handled by interactions.js
+    </script>
   </body>
 </html>
