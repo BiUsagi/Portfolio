@@ -1,11 +1,27 @@
 <!DOCTYPE html>
+<!-- 
+  Author: Trương Bá Sơn
+  Date: 2025
+  Description: Personal Portfolio Website showcasing skills, projects, and experience
+-->
 <html lang="en">
   <head>
-    <title>Portfolio - Sơn</title>
+    <!-- Basic Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Personal portfolio of Trương Bá Sơn - Web Developer" />
+    <meta name="author" content="Trương Bá Sơn" />
+    
+    <title>Portfolio - Sơn</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    
+    <!-- Core CSS -->
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
@@ -14,45 +30,52 @@
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">portfolio</a>
-        <button
-          class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item">
-              <a href="#home-section" class="nav-link"><span>Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#about-section" class="nav-link"><span>About</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills-section" class="nav-link"><span>Skills</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume-section" class="nav-link"><span>Education</span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects-section" class="nav-link"><span>Projects</span></a>
-            </li>
-          </ul>
+    <!-- Main Navigation -->
+    <header role="banner">
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar" aria-label="Main navigation">
+        <div class="container">
+          <!-- Brand -->
+          <a class="navbar-brand" href="index.html" aria-label="Portfolio home">portfolio</a>
+          
+          <!-- Mobile Toggle -->
+          <button
+            class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+            type="button"
+            data-toggle="collapse"
+            data-target="#ftco-nav"
+            aria-controls="ftco-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="oi oi-menu"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+
+          <!-- Navigation Links -->
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+              <li class="nav-item">
+                <a href="#home-section" class="nav-link" aria-label="Go to home section"><span>Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#about-section" class="nav-link" aria-label="Go to about section"><span>About</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills-section" class="nav-link" aria-label="Go to skills section"><span>Skills</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#resume-section" class="nav-link" aria-label="Go to education section"><span>Education</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#projects-section" class="nav-link" aria-label="Go to projects section"><span>Projects</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Home Section -->
     <section id="home-section" class="hero">
@@ -290,12 +313,14 @@
               <p class="mt-4">
                 Được nhà trường vinh danh là một trong những sinh viên xuất sắc nhất chuyên ngành lập trình web khóa K18
               </p>
+              <button class="btn btn-warning mt-3" onclick="openPdfPreview('images/education/academic-transcript.pdf')">Xem bảng điểm</button>
             </div>
             <div class="resume-wrap ftco-animate">
               <span class="date">2025</span>
               <h2>Tiếng Anh học thuật – Level 3 (Top Notch 2)</h2>
               <span class="position">FPT Polytechnic</span>
               <p class="mt-4">Tương đương trình độ: CEFR A2 / TOEIC 380–520 / IELTS 4.0</p>
+              <button class="btn btn-warning mt-3" onclick="openPdfPreview('images/education/english.pdf')">Xem chứng chỉ</button>
             </div>
           </div>
           <div class="col-md-6">
@@ -308,6 +333,7 @@
                 Chứng chỉ hoàn thành khóa học "Phân tích dữ liệu" với điểm số xuất sắc, áp dụng kiến thức vào thực tế
                 thông qua dự án phân tích dữ liệu cho hệ thống quản lý bệnh nhân.
               </p>
+              <button class="btn btn-warning mt-3" onclick="openPdfPreview('images/education/PD07914_672039b38b061fcc21b68c24.jpg')">Xem chứng chỉ</button>
             </div>
              <div class="resume-wrap ftco-animate">
               <span class="date">2025</span>
@@ -316,6 +342,7 @@
               <p class="mt-4">
                 Hoàn thành chương trình học và tốt nghiệp trường FPT Polytechnic với tấm bằng xuất sắc.
               </p>
+              <button class="btn btn-warning mt-3" onclick="openPdfPreview('images/education/diploma.pdf')">Xem chứng chỉ</button>
             </div>
           </div>
         </div>
@@ -326,6 +353,31 @@
         </div>
       </div>
     </section>
+
+    <!-- PDF Preview Modal Component -->
+     <div 
+      class="modal fade" 
+      id="pdfPreviewModal" 
+      tabindex="-1" 
+      role="dialog" 
+      aria-labelledby="pdfPreviewModalLabel" 
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content" style="background-color: #181818; color: #fff;">
+        <!-- Modal Header -->
+        <div class="modal-header" style="border-bottom: 1px solid #333; background: #181818;">
+        <h5 class="modal-title" id="pdfPreviewModalLabel" style="color: #fff;">Xem tài liệu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff; opacity: 1;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <!-- Modal Body - PDF Viewer -->
+        <div class="modal-body" style="background: #222;">
+        <iframe id="pdfViewer" style="width: 100%; height: 80vh; background: #222;" frameborder="0"></iframe>
+        </div>
+      </div>
+      </div>
+    </div>
 
     <!-- Projects Section -->
     <section class="ftco-section ftco-project" id="projects-section">
@@ -516,11 +568,13 @@
       </svg>
     </div>
 
-    <!-- Scripts -->
+    <!-- Core JavaScript Libraries -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -529,6 +583,21 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
+
+    <!-- PDF Preview Handler -->
+    <script>
+      function openPdfPreview(pdfPath) {
+        const pdfViewer = document.getElementById('pdfViewer');
+        if (!pdfPath) {
+          console.error('PDF path is required');
+          return;
+        }
+        pdfViewer.src = pdfPath;
+        $('#pdfPreviewModal').modal('show');
+      }
+    </script>
+
+    <!-- Custom Scripts -->
     <script src="js/main.js"></script>
   </body>
 </html>
