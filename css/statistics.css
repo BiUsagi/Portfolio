@@ -1,0 +1,104 @@
+/* Website Statistics Styles */
+.website-stats {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-box {
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffbd39;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+/* Animation cho counter */
+.stat-number.counting {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .visitor-badge {
+        padding: 6px 16px;
+    }
+    
+    .visitor-badge img {
+        height: 24px !important;
+    }
+}
+
+/* Visitor Badge Styling */
+.visitor-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffbd39, #ff6b6b);
+    padding: 8px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 189, 57, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visitor-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.visitor-badge:hover::before {
+    left: 100%;
+}
+
+.visitor-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 189, 57, 0.4);
+}
+
+.visitor-badge img {
+    height: 32px !important;
+    border-radius: 15px !important;
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+}
